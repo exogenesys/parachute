@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "react-toastify/dist/ReactToastify.css";
+
+body {
+  font-family: "Balsamiq Sans", cursive;
+}
+
+.pageContainer {
+  min-height: 80vh;
+  padding: 2rem;
+}

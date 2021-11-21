@@ -1,0 +1,7 @@
+.messageContainer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: auto;
+  padding-top: 2rem;
+}
