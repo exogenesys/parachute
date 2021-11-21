@@ -169,7 +169,7 @@ function WalletListLoader({
         <Col>
           <Card>
             <Card.Body>
-              <Card.Title>CSV File Form Instruction</Card.Title>
+              <Card.Title>CSV File Upload Instruction</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
                 CSV File should be formatted in this exact way
               </Card.Subtitle>
@@ -177,13 +177,13 @@ function WalletListLoader({
                 <li>
                   File should have two columns:
                   <ul>
-                    <li>Address</li>
-                    <li>Amount</li>
+                    <li>address</li>
+                    <li>amount</li>
                   </ul>
                 </li>
                 <li>
-                  The amount should be mentioned in without decimals. So, if you
-                  want to airdrop 2 tokens and decimals per token is 9, the
+                  The amount should be mentioned without any decimals. So, if
+                  you want to airdrop 2 tokens and decimals per token is 9, the
                   amount should be 2000000000
                 </li>
                 <li>The delimiter should be comma (,)</li>
@@ -191,7 +191,7 @@ function WalletListLoader({
               </ul>
               <Card.Link
                 target="_blank"
-                href="https://github.com/solrazr-app/sol-airdrop/blob/main/receivingWallets/0-airdrop.csv"
+                href="https://github.com/exogenesys/parachute/blob/main/addresses/address_5000.csv"
               >
                 Example CSV File
               </Card.Link>

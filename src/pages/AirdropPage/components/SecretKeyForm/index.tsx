@@ -74,8 +74,19 @@ function SecretKeyForm({
             <Card.Body>
               <Card.Title>Notes</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
-                Read this before sumbitting your secret key
+                Read this before submitting your secret key
               </Card.Subtitle>
+              <ul>
+                <li>
+                  The developers of this tool bears no responsibility in event
+                  of a hack, or any kind of loss, that may occur while using
+                  Parachute
+                </li>
+                <li>
+                  Please, do your own research on how to stay safe while in
+                  handling tokens
+                </li>
+              </ul>
             </Card.Body>
           </Card>
         </Col>

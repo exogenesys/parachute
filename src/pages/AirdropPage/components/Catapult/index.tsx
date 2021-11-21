@@ -224,8 +224,8 @@ function Catapult({
               <Card.Body>
                 <Card.Title>Batch Token Transfer Guide</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
-                  Following are the prerequisites for making batch token
-                  transfers
+                  Before initiating the batch token transfer, please make sure
+                  that the following things are true:
                 </Card.Subtitle>
                 <ul>
                   <li>
@@ -233,8 +233,12 @@ function Catapult({
                   </li>
                   <li>Your wallet has enough SOL to fund the batch transfer</li>
                   <li>
-                    Do not press refresh or close the tab until the airdrop
-                    halts or completes
+                    You do not press refresh or close the tab until the airdrop
+                    completes
+                  </li>
+                  <li>
+                    You have enough battery (if you are on a mobile device) and
+                    internet connectivity is reliable
                   </li>
                 </ul>
                 <Card.Subtitle className="mb-2 text-muted">FAQ</Card.Subtitle>
@@ -244,19 +248,6 @@ function Catapult({
                     the token you're sending, we will create one and then send
                   </li>
                 </ul>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-        <Row className="mt-3">
-          <Col>
-            <Card className="mt-2">
-              <Card.Body>
-                <Card.Title>Airdrop Stats</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  Following are the prerequisites for making batch token
-                  transfers
-                </Card.Subtitle>
               </Card.Body>
             </Card>
           </Col>

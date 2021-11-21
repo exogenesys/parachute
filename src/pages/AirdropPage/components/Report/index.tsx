@@ -78,27 +78,39 @@ function Report({ reset }: { reset: any }) {
                 <Card.Subtitle className="mb-2 text-muted">
                   Do another airdrop or go back to the home page.
                 </Card.Subtitle>
-                <div className="p-5 text-center">
-                  <Row className="">
-                    <Col>Total Airdrops</Col>
-                    <Col>Successful Airdrops</Col>
-                    <Col>Failed Airdrops</Col>
-                    <Col>Success Percentage</Col>
-                  </Row>
-                  <Row className="display-6">
-                    <Col>{logArray.length}</Col>
-                    <Col>{logArray.length - walletListFailed.length}</Col>
-                    <Col>{walletListFailed.length}</Col>
-                    <Col>
-                      {Math.ceil(
-                        ((logArray.length - walletListFailed.length) /
-                          logArray.length) *
-                          100
-                      )}
-                      %
-                    </Col>
-                  </Row>
-                </div>
+                <Row className="mt-3 mb-3">
+                  <Col>
+                    <Card className="mt-2">
+                      <Card.Body>
+                        <Card.Title>Airdrop Stats</Card.Title>
+                        <div className="p-1 text-center">
+                          <Row className="">
+                            <Col>Total Airdrops</Col>
+                            <Col>Successful Airdrops</Col>
+                            <Col>Failed Airdrops</Col>
+                            <Col>Success Percentage</Col>
+                          </Row>
+                          <Row className="display-6">
+                            <Col>{logArray.length}</Col>
+                            <Col>
+                              {logArray.length - walletListFailed.length}
+                            </Col>
+                            <Col>{walletListFailed.length}</Col>
+                            <Col>
+                              {Math.ceil(
+                                ((logArray.length - walletListFailed.length) /
+                                  logArray.length) *
+                                  100
+                              )}
+                              %
+                            </Col>
+                          </Row>
+                        </div>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                </Row>
+
                 <div className="mb-3">
                   <div className="d-grid gap-2">
                     <CopyToClipboard
