@@ -20,7 +20,7 @@ Deployed at https://parachute.vercel.app, but it is recommended that you run you
 - The solana related code is decoupled from the rest of the app and entirely written in these two files:
   - https://github.com/exogenesys/parachute/blob/main/src/services/SolanaService/index.ts
   - https://github.com/exogenesys/parachute/blob/main/src/services/AirdropService/index.ts
-- Although, the application is deployed on https://parachute.vercel.app, It is recommended to run your own instance of the application so that you know that you’re running the exact same code as you see on Github and you don’t have to trust any deployment
+- Although, the application is deployed at https://parachute.vercel.app, It is recommended to run your own instance of the application so that you know that you’re running the exact same code as you see on Github and you don’t have to trust any deployment
 
 ## Notes on Scalability
 - The app is potentially capable of doing as many airdrops as you want
