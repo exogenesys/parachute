@@ -16,8 +16,8 @@ import {
   faTasks,
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "./WalletListLoader.module.css";
+import { CSVReader } from "../../../../deps";
 import { toast } from "react-toastify";
-import CSVReader from "react-csv-reader";
 import FileTable from "../FileTable";
 
 type WalletListLoaderProps = {

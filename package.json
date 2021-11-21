@@ -10,7 +10,6 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
-    "@rollup/plugin-inject": "^4.0.3",
     "@solana/spl-token": "^0.1.8",
     "@solana/web3.js": "^1.30.2",
     "async-es": "^3.2.2",
