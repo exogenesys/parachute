@@ -15,18 +15,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { PublicKey } from "@solana/web3.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { v1 as uuidv1 } from "uuid";
 import styles from "./Catapult.module.css";
-import { toast } from "react-toastify";
-import CSVReader from "react-csv-reader";
 import { airdropStates } from "../../../../utils/general";
-import {
-  AirdropService,
-  logObjectType,
-} from "../../../../services/AirdropService";
+import { logObjectType } from "../../../../services/AirdropService";
 import { SolanaServiceContext } from "../../contexts/SolanaServiceContext";
 import { AirdropServiceContext } from "../../contexts/AirdropServiceContext";
-import AirdropRequestItem from "../AirdropRequestItem";
 import AirdropLogItem from "../AirdropLogItem";
 
 type CatapultProps = {
@@ -42,14 +35,12 @@ function Catapult({
   walletList,
   setAirdropState,
   airdropState,
-  tokenMintAccount,
   goBack,
   updateAccountBalances,
 }: CatapultProps) {
   const solanaService = useContext(SolanaServiceContext);
   const airdropService = useContext(AirdropServiceContext);
 
-  const [isAirdropInitiated, setIsAirdropInitiated] = useState(false);
   const [successCount, setSuccessCount] = useState(0);
   const emptyLogArray: logObjectType[] = [];
   const [logArray, setLogArray] = useState(emptyLogArray);
@@ -104,6 +95,7 @@ function Catapult({
           animated
           variant="success"
           now={(successCount / walletList.length) * 100}
+          label={`${(successCount / walletList.length) * 100}%`}
         />
       );
     } else {
@@ -114,6 +106,7 @@ function Catapult({
   const onEveryRequest = (logs: logObjectType[]) => {
     setSuccessCount(logs.length);
     setLogArray(logs);
+    updateAccountBalances();
   };
 
   const handleInitiateAirdrop = async () => {
@@ -125,15 +118,6 @@ function Catapult({
       setAirdropState(airdropStates.COMPLETED);
     } else {
       setAirdropState(airdropStates.FAILED);
-    }
-  };
-
-  const getAirdropRequestItems = () => {
-    const items = airdropService.getAirdropRequestItemsArray();
-    if (items.success) {
-      return items.data;
-    } else {
-      return [];
     }
   };
 
@@ -178,17 +162,8 @@ function Catapult({
                     </Button>
                   </div>
                 </div>
-                <Table striped bordered responsive className={styles.table}>
-                  {airdropState === airdropStates.READY && (
-                    <thead className={styles.thead}>
-                      <tr>
-                        <th>Address</th>
-                        <th>Amount</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead>
-                  )}
-                  {airdropState !== airdropStates.READY && (
+                {airdropState !== airdropStates.READY && (
+                  <Table striped bordered responsive className={styles.table}>
                     <thead className={styles.thead}>
                       <tr>
                         <td>Request Id</td>
@@ -200,10 +175,8 @@ function Catapult({
                         <td>Amount</td>
                       </tr>
                     </thead>
-                  )}
-                  <tbody className={styles.tbody}>
-                    {airdropState !== airdropStates.READY &&
-                      logArray.map((item, index) => (
+                    <tbody className={styles.tbody}>
+                      {logArray.map((item, index) => (
                         <AirdropLogItem
                           index={index}
                           key={item.uniqueId}
@@ -216,18 +189,9 @@ function Catapult({
                           timestamp={item.timestamp}
                         />
                       ))}
-                    {airdropState === airdropStates.READY &&
-                      getAirdropRequestItems().map((item) => (
-                        <AirdropRequestItem
-                          key={item.uniqueId}
-                          address={item.address}
-                          amount={item.amount}
-                          status={item.status}
-                          uniqueId={item.uniqueId}
-                        />
-                      ))}
-                  </tbody>
-                </Table>
+                    </tbody>
+                  </Table>
+                )}
               </Card.Body>
             </Card>
           </Col>

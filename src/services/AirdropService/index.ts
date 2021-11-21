@@ -1,4 +1,5 @@
 import { v1 as uuidv1 } from "uuid";
+//@ts-ignore
 import { eachOfLimit } from "async-es";
 
 type WalletAndAmountObjectType = {
@@ -83,21 +84,6 @@ export class AirdropService {
       throw new Error("Not implemented");
     } catch (error) {
       return { success: false, error, data: null };
-    }
-  };
-
-  getAirdropRequestItemsArray = () => {
-    try {
-      if (this._airdropRequestItemsMap) {
-        const requestItemArray = Object.values(this._airdropRequestItemsMap);
-        if (requestItemArray && requestItemArray.length) {
-          return { success: true, error: null, data: requestItemArray };
-        }
-        throw new Error("Not implemented");
-      }
-      throw new Error("Not implemented");
-    } catch (error) {
-      return { success: false, error, data: [] };
     }
   };
 

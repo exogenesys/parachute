@@ -17,13 +17,9 @@ import styles from "./Report.module.css";
 import { toast } from "react-toastify";
 import CSVReader from "react-csv-reader";
 import { airdropStates } from "../../../../utils/general";
-import {
-  AirdropService,
-  logObjectType,
-} from "../../../../services/AirdropService";
+import { logObjectType } from "../../../../services/AirdropService";
 import { SolanaServiceContext } from "../../contexts/SolanaServiceContext";
 import { AirdropServiceContext } from "../../contexts/AirdropServiceContext";
-import AirdropRequestItem from "../AirdropRequestItem";
 import AirdropLogItem from "../AirdropLogItem";
 
 function Report({ reset }: { reset: any }) {
@@ -80,12 +76,12 @@ function Report({ reset }: { reset: any }) {
                   Congratulation, airdropping has completed!
                 </Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
-                  Progress
+                  Do another airdrop or go back to the home page.
                 </Card.Subtitle>
                 <div className="mb-3">
                   <div className="d-grid gap-2">
                     <CopyToClipboard
-                      text={walletListFailed}
+                      text={walletListFailed.join(",")}
                       onCopy={() => toast.success("Copied to clipboard")}
                     >
                       <Button variant="warning" type="button" className="my-1">

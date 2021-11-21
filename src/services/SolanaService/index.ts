@@ -8,7 +8,6 @@ import { Transaction } from "@solana/web3.js";
 import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import { Token } from "@solana/spl-token";
 import ERRORS from "./errors";
-import { mapLimit } from "async-es";
 
 const SPL_ASSOCIATED_TOKEN_ACCOUNT_PROGRAM_ID: PublicKey = new PublicKey(
   "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
