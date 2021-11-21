@@ -1,7 +1,5 @@
 import React from "react";
-import { Row, Col, Container, Table } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { Table } from "react-bootstrap";
 import styles from "./FileTable.module.css";
 
 function FileTable({ data }: { data: any }) {
