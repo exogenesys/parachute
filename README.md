@@ -1,4 +1,4 @@
-# parachute
+# parachute (airdrop-as-a-service for solana)
 
 Parachute is a tool which lets you airdrop SPL tokens to a list of wallet addresses (potentially sponsored by https://solrazr.com/)
 
