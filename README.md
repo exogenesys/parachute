@@ -1,6 +1,6 @@
 # parachute
 
-Parachute is a tool which lets you airdrop SPL token to a list of wallet addresses
+Parachute is a tool which lets you airdrop SPL tokens to a list of wallet addresses
 
 Deployed at https://parachute.vercel.app, but it is recommended that you run your own instance so that you don't have to trust any deployment.
 
