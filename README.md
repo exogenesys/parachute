@@ -2,8 +2,6 @@
 
 Parachute is a tool which lets you airdrop SPL tokens to a list of wallet addresses (potentially sponsored by https://solrazr.com/)
 
-Deployed at https://parachute.vercel.app, but it is recommended that you run your own instance so that you don't have to trust any deployment
-
 ## How to run your own instance
 
 1. Run `git clone https://github.com/exogenesys/parachute`
@@ -21,7 +19,7 @@ Deployed at https://parachute.vercel.app, but it is recommended that you run you
   - https://github.com/exogenesys/parachute/blob/main/src/services/SolanaService/index.ts
   - https://github.com/exogenesys/parachute/blob/main/src/services/AirdropService/index.ts
 - Although, the application is deployed at https://parachute.vercel.app, It is recommended to run your own instance of the application so that you know that you’re running the exact same code as you see on Github and you don’t have to trust any deployment
-- If you decide to go with the deployment at https://parachute.vercel.app, you can verify the deployments here on the following page: https://github.com/exogenesys/parachute/deployments/activity_log?environment=Production
+- If you decide to go with the official deployments, you can verify the deployments here on the following page: https://github.com/exogenesys/parachute/deployments/activity_log?environment=Production
 - The app doesn’t use any persistent client side storage option like localstorage, everything is stored in memory which is forgotten by the app after closing the tab or reloading
 
 ## Notes on Scalability
@@ -29,7 +27,7 @@ Deployed at https://parachute.vercel.app, but it is recommended that you run you
 - The app is potentially capable of doing as many airdrops as you want
 - Given that the RPC nodes used allows that as well
   - Public RPC nodes are prone to be congested, so speed may be affected
-  - Public RPC nodes might rate limite you after a certain number of transfers
+  - Public RPC nodes might rate limited you after a certain number of transfers
   - This is can easily be solved by using private RPC nodes
 
 ## Roadmap
