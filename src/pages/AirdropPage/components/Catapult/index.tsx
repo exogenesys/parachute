@@ -12,6 +12,7 @@ import {
   faArrowLeft,
   faParachuteBox,
   faPlane,
+  faSkull,
 } from "@fortawesome/free-solid-svg-icons";
 import { PublicKey } from "@solana/web3.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,6 +30,7 @@ type CatapultProps = {
   tokenMintAccount: string;
   goBack: any;
   updateAccountBalances: any;
+  reset: any;
 };
 
 function Catapult({
@@ -37,6 +39,7 @@ function Catapult({
   airdropState,
   goBack,
   updateAccountBalances,
+  reset,
 }: CatapultProps) {
   const solanaService = useContext(SolanaServiceContext);
   const airdropService = useContext(AirdropServiceContext);
@@ -161,6 +164,22 @@ function Catapult({
                       &nbsp; Initiate Airdrop
                     </Button>
                   </div>
+                  {airdropState === airdropStates.INITIATED && (
+                    <div className="d-grid gap-2">
+                      <Button
+                        variant="danger"
+                        type="button"
+                        onClick={() => {
+                          reset();
+                          window.location.reload();
+                        }}
+                        className="my-1"
+                      >
+                        <FontAwesomeIcon icon={faSkull} />
+                        &nbsp; Abort
+                      </Button>
+                    </div>
+                  )}
                 </div>
                 {airdropState !== airdropStates.READY && (
                   <Table striped bordered responsive className={styles.table}>

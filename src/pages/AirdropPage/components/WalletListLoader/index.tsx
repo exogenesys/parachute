@@ -107,6 +107,23 @@ function WalletListLoader({
                   />
                 </Form.Group>
                 {isWalletListUploaded && isWalletListValidated ? (
+                  <div className="p-5 text-center">
+                    <Row className="">
+                      <Col>Number Of Addresses</Col>
+                      <Col>Number Of Total Tokens</Col>
+                    </Row>
+                    <Row className="display-6">
+                      <Col>{fileData.length}</Col>
+                      <Col>
+                        {fileData.reduce(
+                          (sum, row) => sum + parseInt(row.amount),
+                          0
+                        )}
+                      </Col>
+                    </Row>
+                  </div>
+                ) : null}
+                {isWalletListUploaded && isWalletListValidated ? (
                   <Button
                     variant="primary"
                     type="button"

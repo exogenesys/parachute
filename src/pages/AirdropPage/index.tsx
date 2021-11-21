@@ -89,6 +89,7 @@ function Airdrop() {
               tokenMintAccount={tokenMintAccount}
               goBack={goBackFromCatapult}
               updateAccountBalances={updateAccountBalances}
+              reset={resetState}
             />
           );
         }
