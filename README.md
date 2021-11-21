@@ -33,6 +33,6 @@ Deployed at https://parachute.vercel.app, but it is recommended that you run you
 - Allow connecting to mainnet
 - Allow connecting via custom RPC Nodes
 - Estimate and show how much SOL you'd need to do an airdrop
-- Fetch wallet address who hold a certain SPL token
-- Use electron to make desktop app
+- Fetch wallet address which hold a certain SPL token
+- Use electron to make a desktop app
 
