@@ -39,3 +39,4 @@ Deployed at https://parachute.vercel.app, but it is recommended that you run you
 - Estimate and show how much SOL you'd need to do an airdrop
 - Fetch wallet address which hold a certain SPL token
 - Use electron to make a desktop app
+- Dark Mode 🌚
