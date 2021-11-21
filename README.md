@@ -24,7 +24,7 @@ Deployed at https://parachute.vercel.app, but it is recommended that you run you
 
 ## Notes on Scalability
 - The app is potentially capable of doing as many airdrops as you want
-- Given that the RPC Server used allows that as well
+- Given that the RPC nodes used allows that as well
   - Public RPC nodes are prone to be congested, so speed may be affected
   - Public RPC nodes might rate limite you after a certain number of transfers
   - This is can easily be solved by using private RPC nodes
