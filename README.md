@@ -15,8 +15,8 @@ Deployed at https://parachute.vercel.app, but it is recommended that you run you
 ## Notes on Security
 
 - The app uses only official Solana libraries for the entire airdrop logic, i.e. @solana/spl-token, @solana/web3.js
-- The entire logic of the app is handled on the client side
-- The app doesn’t use any persistent client side storage option like localstorage, everything is stored in memory which is forgotten after closing the tab or reloading
+- There is no server anywhere involved in the data flow of this app, and even the deployement on vercel is static file serve deployement, so none of your data leaves the client side
+- The app doesn’t use any persistent client side storage option like localstorage, everything is stored in memory which is forgotten by the app after closing the tab or reloading
 - The application is open-sourced and to be audited by the community
 - The solana related code is decoupled from the rest of the app and entirely written in these two files:
   - https://github.com/exogenesys/parachute/blob/main/src/services/SolanaService/index.ts
