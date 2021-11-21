@@ -95,7 +95,7 @@ function Catapult({
           animated
           variant="success"
           now={(successCount / walletList.length) * 100}
-          label={`${(successCount / walletList.length) * 100}%`}
+          label={`${Math.ceil((successCount / walletList.length) * 100)}%`}
         />
       );
     } else {
@@ -166,29 +166,32 @@ function Catapult({
                   <Table striped bordered responsive className={styles.table}>
                     <thead className={styles.thead}>
                       <tr>
-                        <td>Request Id</td>
+                        <td>Index</td>
+                        <td>ID</td>
                         <td>Timestamp</td>
                         <td>Status</td>
-                        <td>TransactionId</td>
+                        <td>Transaction ID</td>
                         <td>Message</td>
                         <td>Wallet Address</td>
                         <td>Amount</td>
                       </tr>
                     </thead>
                     <tbody className={styles.tbody}>
-                      {logArray.map((item, index) => (
-                        <AirdropLogItem
-                          index={index}
-                          key={item.uniqueId}
-                          uniqueId={item.uniqueId}
-                          success={item.success}
-                          transactionId={item.transactionId}
-                          message={item.message}
-                          walletAddress={item.walletAddress}
-                          amount={item.amount}
-                          timestamp={item.timestamp}
-                        />
-                      ))}
+                      {logArray
+                        .map((item, index) => (
+                          <AirdropLogItem
+                            index={index}
+                            key={item.uniqueId}
+                            uniqueId={item.uniqueId}
+                            success={item.success}
+                            transactionId={item.transactionId}
+                            message={item.message}
+                            walletAddress={item.walletAddress}
+                            amount={item.amount}
+                            timestamp={item.timestamp}
+                          />
+                        ))
+                        .reverse()}
                     </tbody>
                   </Table>
                 )}

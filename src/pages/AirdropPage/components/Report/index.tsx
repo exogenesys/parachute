@@ -78,6 +78,27 @@ function Report({ reset }: { reset: any }) {
                 <Card.Subtitle className="mb-2 text-muted">
                   Do another airdrop or go back to the home page.
                 </Card.Subtitle>
+                <div className="p-5 text-center">
+                  <Row className="">
+                    <Col>Total Airdrops</Col>
+                    <Col>Successful Airdrops</Col>
+                    <Col>Failed Airdrops</Col>
+                    <Col>Success Percentage</Col>
+                  </Row>
+                  <Row className="display-6">
+                    <Col>{logArray.length}</Col>
+                    <Col>{logArray.length - walletListFailed.length}</Col>
+                    <Col>{walletListFailed.length}</Col>
+                    <Col>
+                      {Math.ceil(
+                        ((logArray.length - walletListFailed.length) /
+                          logArray.length) *
+                          100
+                      )}
+                      %
+                    </Col>
+                  </Row>
+                </div>
                 <div className="mb-3">
                   <div className="d-grid gap-2">
                     <CopyToClipboard
@@ -105,10 +126,11 @@ function Report({ reset }: { reset: any }) {
                 <Table striped bordered responsive className={styles.table}>
                   <thead className={styles.thead}>
                     <tr>
-                      <td>Request Id</td>
+                      <td>Index</td>
+                      <td>ID</td>
                       <td>Timestamp</td>
                       <td>Status</td>
-                      <td>TransactionId</td>
+                      <td>Transaction ID</td>
                       <td>Message</td>
                       <td>Wallet Address</td>
                       <td>Amount</td>
