@@ -37,6 +37,7 @@ Deployed at https://parachute.services, but it is recommended that you clone and
 - Allow connecting to mainnet
 - Allow connecting via custom RPC Nodes
 - Estimate and show how much SOL you'd need to do an airdrop
+- Integrate with https://github.com/saber-hq/merkle-distributor
 - Fetch wallet address which hold a certain SPL token
 - Use electron to make a desktop app
 - Dark Mode 🌚
