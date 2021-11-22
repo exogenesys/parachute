@@ -2,7 +2,7 @@
 
 Parachute is a tool which lets you airdrop SPL tokens to a list of wallet addresses (potentially sponsored by https://solrazr.com/)
 
-Deployed at https://parachute.vercel.app, but it is recommended that you clone and run your own instance locally, so that you don't have to trust any deployment
+Deployed at https://parachute.services, but it is recommended that you clone and run your own instance locally, so that you don't have to trust any deployment
 
 ## How to run your own instance
 
