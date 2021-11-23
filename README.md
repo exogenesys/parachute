@@ -12,6 +12,17 @@ Deployed at https://parachute.services, but it is recommended that you clone and
 4. Run `npm run serve`
 5. Go to `localhost:5000` in your browser
 
+## Roadmap
+
+- Allow connecting to mainnet
+- Allow connecting via custom RPC Nodes
+- Use signAllTransaction and allow signing using external wallet
+- Estimate and show how much SOL you'd need to do an airdrop
+- Integrate with https://github.com/saber-hq/merkle-distributor
+- Fetch wallet address which hold a certain SPL token
+- Use electron to make a desktop app
+- Dark Mode 🌚
+
 ## Notes on Security
 
 - The app uses only official Solana libraries for the entire airdrop logic, i.e. @solana/spl-token, @solana/web3.js
@@ -23,6 +34,7 @@ Deployed at https://parachute.services, but it is recommended that you clone and
 - Although, the application is deployed at https://parachute.vercel.app, It is recommended to run your own instance of the application so that you know that you’re running the exact same code as you see on Github and you don’t have to trust any deployment
 - If you decide to go with the official deployments, you can verify the deployments here on the following page: https://github.com/exogenesys/parachute/deployments/activity_log?environment=Production
 - The app doesn’t use any persistent client side storage option like localstorage, everything is stored in memory which is forgotten by the app after closing the tab or reloading
+- Getting rid of having to use the secret key, and using an external wallet instead, is a top priority
 
 ## Notes on Scalability
 
@@ -31,14 +43,3 @@ Deployed at https://parachute.services, but it is recommended that you clone and
   - Public RPC nodes are prone to be congested, so speed may be affected
   - Public RPC nodes might rate limited you after a certain number of transfers
   - This is can easily be solved by using private RPC nodes
-
-## Roadmap
-
-- Allow connecting to mainnet
-- Allow connecting via custom RPC Nodes
-- Use signAllTransaction and allow signing using external wallet
-- Estimate and show how much SOL you'd need to do an airdrop
-- Integrate with https://github.com/saber-hq/merkle-distributor
-- Fetch wallet address which hold a certain SPL token
-- Use electron to make a desktop app
-- Dark Mode 🌚
